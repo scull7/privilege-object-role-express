@@ -8,7 +8,10 @@ Middleware  = (options) ->
   getContextFromRequest = parsedOptions.getContext
   addRolesToUser        = parsedOptions.addRoles
 
-  getRoles              = PrivilegeObjectRole objectHandlerMap
+  getRoles              = if typeof objectHandlerMap is 'function'
+    PrivilegeObjectRole objectHandlerMap
+  else
+    PrivilegeObjectRole.fromJson objectHandlerMap
 
   (req, res, next) -> getContextFromRequest req, (err, context) ->
     if err then return (next err)

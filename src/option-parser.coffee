@@ -21,9 +21,7 @@ parser  = (options) ->
   }           = options
 
 
-  throw new TypeError 'map_required' if not map
-
-  map = fromJson map if typeof map.getRoles isnt 'function'
+  if not map then throw new TypeError 'map_required'
 
 
   return {
