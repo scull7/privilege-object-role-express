@@ -8,7 +8,7 @@ Middleware  = (options) ->
   getContextFromRequest = parsedOptions.getContext
   addRolesToUser        = parsedOptions.addRoles
 
-  getRoles              = if typeof objectHandlerMap is 'function'
+  getRoles              = if typeof objectHandlerMap.getRoles is 'function'
     PrivilegeObjectRole objectHandlerMap
   else
     PrivilegeObjectRole.fromJson objectHandlerMap
