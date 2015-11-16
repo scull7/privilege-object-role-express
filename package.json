@@ -32,6 +32,6 @@
     "mocha": "^2.3.3"
   },
   "dependencies": {
-    "privilege-object-role": "^2.0.3"
+    "privilege-object-role": "^2.0.4"
   }
 }
