@@ -1,6 +1,6 @@
 {
   "name": "privilege-object-role-express",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An express middleware for the privilege-object-role module.",
   "main": "dist/index.js",
   "scripts": {
